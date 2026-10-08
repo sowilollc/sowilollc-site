@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sowilo LLC</title>
+<meta name="description" content="Sowilo LLC is a Michigan software company. We build Atachy, a dating app built on attachment science.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<style>
+:root{--ink:#1a1422;--muted:#5b5266;--bg:#faf8fd;--panel:#ffffff;--soft:#f1eaf9;--line:#e4dcef;--purple:#9966cc;--deep:#5b3a87;--deeper:#3d2560}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--deep)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:rgba(250,248,253,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;letter-spacing:.02em}
+.brand img{width:36px;height:36px}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px}
+.nav ul a:hover{color:var(--deep)}
+.hero{padding:88px 24px 72px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--deep);background:var(--soft);padding:6px 12px;border-radius:999px}
+h1{font-size:clamp(36px,5vw,56px);line-height:1.08;letter-spacing:-.02em;margin:20px 0 18px}
+h1 span{color:var(--purple)}
+.lead{font-size:19px;color:var(--muted);max-width:34em;margin:0 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none;font-size:16px}
+.btn.primary{background:var(--deep);color:#fff}
+.btn.primary:hover{background:var(--deeper)}
+.btn.ghost{border:1.5px solid var(--line);color:var(--ink);background:var(--panel)}
+.btn.ghost:hover{border-color:var(--purple)}
+.hero-art{display:flex;justify-content:center}
+.hero-art .disc{width:min(380px,80vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 45%,#fff 0,#f4eefb 60%,#ebe1f7 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 30px 80px -30px rgba(91,58,135,.45)}
+.hero-art img{width:82%;height:auto}
+section{padding:80px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,3.4vw,38px);letter-spacing:-.015em;line-height:1.15;margin:0 0 14px}
+.sub{color:var(--muted);max-width:40em;margin:0 0 40px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px}
+.card h3{margin:14px 0 8px;font-size:19px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.icon{width:42px;height:42px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--deep)}
+.product{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.product .text{padding:44px}
+.product .side{background:linear-gradient(150deg,#5b3a87,#9966cc);color:#fff;padding:44px;display:flex;flex-direction:column;justify-content:center;gap:18px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);background:var(--soft);padding:5px 10px;border-radius:6px}
+.product h3{font-size:30px;margin:14px 0 10px;letter-spacing:-.01em}
+.product p{color:var(--muted);margin:0 0 14px}
+.side .stat{border-left:3px solid rgba(255,255,255,.55);padding-left:16px}
+.side .stat b{display:block;font-size:18px}
+.side .stat span{opacity:.85;font-size:15px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact .card a{font-weight:600;text-decoration:none}
+.label{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.big{font-size:20px}
+footer{border-top:1px solid var(--line);padding:44px 0 56px;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.foot img{width:150px;height:auto;opacity:.95}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{color:var(--muted);text-decoration:none}
+.foot a:hover{color:var(--deep)}
+.fine{margin-top:28px;font-size:13px;line-height:1.6}
+@media (max-width:860px){
+ .hero{grid-template-columns:1fr;padding:48px 24px;text-align:left}
+ .hero-art{order:-1}
+ .grid3,.contact,.product{grid-template-columns:1fr}
+ .nav ul{gap:18px}
+ .product .text,.product .side{padding:30px}
+}
+@media (max-width:520px){ .nav ul li:nth-child(1){display:none} body{font-size:16px} }
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#top"><img src="assets/emblem.webp" alt="">Sowilo LLC</a>
+  <nav aria-label="Main"><ul><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+ </div>
+</header>
+<main id="top">
+ <div class="wrap hero">
+  <div>
+   <span class="eyebrow">Software company · Michigan</span>
+   <h1>Software for the parts of life that <span>matter most.</span></h1>
+   <p class="lead">Sowilo LLC builds consumer software that helps people understand themselves and get better at the things they care about, starting with relationships.</p>
+   <div class="btns"><a class="btn primary" href="#products">See our product</a><a class="btn ghost" href="#contact">Contact us</a></div>
+  </div>
+  <div class="hero-art"><div class="disc"><img src="assets/emblem.webp" alt="Sowilo LLC emblem"></div></div>
+ </div>
+
+ <section id="about">
+  <div class="wrap">
+   <h2>How we build</h2>
+   <p class="sub">We are a small, independent company. Every product we make is held to the same three commitments.</p>
+   <div class="grid3">
+    <div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/></svg></div><h3>Grounded in research</h3><p>We build on established, peer-reviewed science and say plainly what a tool can and cannot tell you.</p></div>
+    <div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Privacy first</h3><p>We ask before we use sensitive information, never sell personal data, and let you delete your account at any time.</p></div>
+    <div class="card"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div><h3>Built to help, not to hook</h3><p>We measure success by whether our products genuinely serve the people who use them, not by how long they stay.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="products">
+  <div class="wrap">
+   <h2>Our product</h2>
+   <p class="sub">Sowilo LLC operates Atachy under its registered assumed name.</p>
+   <div class="product">
+    <div class="text">
+     <span class="tag">Dating · Web, with iOS &amp; Android coming</span>
+     <h3>Atachy</h3>
+     <p>Atachy is a dating app built on attachment science. A free 12-question assessment shows how you tend to act when closeness gets complicated, and Rowan, Atachy's AI relationship coach, helps you work with that while you date.</p>
+     <p>No games, no pay-to-be-seen visibility. Just people who'd rather fix the pattern than swipe to the next one.</p>
+     <a class="btn primary" href="https://atachyapp.com">Visit atachyapp.com</a>
+    </div>
+    <div class="side">
+     <div class="stat"><b>Attachment-based</b><span>Built on a validated attachment questionnaire</span></div>
+     <div class="stat"><b>A coach in your corner</b><span>Rowan helps you date with more security</span></div>
+     <div class="stat"><b>Launching in the US</b><span>Atachy is preparing for its US beta</span></div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section id="contact">
+  <div class="wrap">
+   <h2>Contact</h2>
+   <p class="sub">Questions about Sowilo LLC or Atachy? We'd like to hear from you.</p>
+   <div class="contact">
+    <div class="card"><div class="label">Email</div><a class="big" href="mailto:willow.wagner@sowilollc.com">willow.wagner@sowilollc.com</a></div>
+    <div class="card"><div class="label">Phone</div><a class="big" href="tel:+12483965511">(248) 396-5511</a></div>
+   </div>
+  </div>
+ </section>
+</main>
+<footer>
+ <div class="wrap">
+  <div class="foot">
+   <div><img src="assets/wordmark.webp" alt="Sowilo"><div style="margin-top:10px">A Michigan software company.</div></div>
+   <ul><li><b style="color:var(--ink)">Company</b></li><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#contact">Contact</a></li></ul>
+   <ul><li><b style="color:var(--ink)">Atachy legal</b></li><li><a href="https://atachyapp.com/legal/privacy">Privacy Policy</a></li><li><a href="https://atachyapp.com/legal/terms">Terms of Service</a></li><li><a href="https://atachyapp.com/safety/notice">Safety notice</a></li></ul>
+  </div>
+  <div class="fine">© 2026 Sowilo LLC, a Michigan limited liability company. Atachy is an assumed name of Sowilo LLC.<br>This website does not use cookies or collect personal information.</div>
+ </div>
+</footer>
+</body>
+</html>
